@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
+import React, { Component } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-import Header from './Header';
-import Landing from './Landing';
+import Header from './Header'
+import Landing from './Landing'
 import Dashboard from './Dashboard'
-const SurveyNew = () => <h2>SurveyNew</h2>;
+const SurveyNew = () => <h2>SurveyNew</h2>
 
 class App extends Component {
   componentDidMount () {
-    this.props.fetchUser();
+    this.props.fetchUser()
   }
 
-  render() {
+  render () {
     return (
       <div className="container">
         <BrowserRouter>
@@ -25,7 +25,7 @@ class App extends Component {
           </div>
         </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 

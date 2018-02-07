@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import Payments from './Payments'
 
 class Header extends Component {
-  renderContent() {
+  renderContent () {
     switch (this.props.auth) {
       case null:
-        return;
+        return
       case false:
         return (
           <li>
             <a href="/auth/google">Login With Google</a>
           </li>
-        );
+        )
       default:
         return [
           <li key="1"><Payments/></li>,
@@ -23,7 +23,7 @@ class Header extends Component {
     }
   }
 
-  render() {
+  render () {
     return (
       <nav>
         <div className="nav-wrapper">
@@ -33,7 +33,7 @@ class Header extends Component {
           <ul className="right">{this.renderContent()}</ul>
         </div>
       </nav>
-    );
+    )
   }
 }
 
